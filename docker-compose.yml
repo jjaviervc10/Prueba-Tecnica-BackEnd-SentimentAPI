@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "SqlServer@2025"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    networks:
+      - sentiment-net
+    volumes:
+      - sql_data:/var/opt/mssql
+
+  sentimentapi:
+    build: .
+    container_name: sentimentapi
+    ports:
+      - "5055:8080"
+    depends_on:
+      - sqlserver
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+    networks:
+      - sentiment-net
+
+networks:
+  sentiment-net:
+
+volumes:
+  sql_data:
