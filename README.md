@@ -175,3 +175,16 @@ Notas finales
 Este proyecto fue desarrollado con enfoque en claridad, mantenibilidad y buenas
 prácticas backend, priorizando la correcta separación de responsabilidades y
 la facilidad de despliegue.
+
+## Proceso de desarrollo y control de versiones
+
+El desarrollo de este proyecto se realizó de manera incremental, priorizando primero
+la estructura base de la API, seguida de la implementación de la lógica de negocio,
+persistencia de datos, manejo de errores, pruebas y finalmente la documentación.
+
+Durante el proceso se realizaron ajustes en la configuración del proyecto, limpieza
+de archivos generados automáticamente (`bin/obj`) y mejoras en la estructura general
+para cumplir con buenas prácticas de desarrollo en ASP.NET Core.
+
+El historial de commits refleja hitos funcionales clave del proyecto, manteniendo un
+repositorio limpio y enfocado en el código relevante para la evaluación técnica.
